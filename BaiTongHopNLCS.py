@@ -56,7 +56,7 @@ def process(imgPath):
 	#xoa nen phia sau
 	img = cv2.multiply(idc, 1.1)
 	kernel = np.ones((1, 1), np.uint8)
-	img = cv2.erode(idc, kernel, iterations=1)
+	img = cv2.erode(img, kernel, iterations=1)
 	kernel1 = np.zeros( (5,7), np.float32)
 	kernel1[3,3] = 3.2
 	boxFilter = np.ones( (5,7), np.float32) / 90.0
